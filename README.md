@@ -23,3 +23,40 @@ course-materials-access/
 ├── app.py
 ├── requirements.txt
 └── README.md
+```
+
+## How it works
+
+The app reads the access codes and resource URLs from Streamlit Secrets.
+
+When a user enters a valid code, the app displays the corresponding resource link.
+
+## Run locally
+
+Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the Streamlit app:
+
+```bash
+streamlit run app.py
+```
+
+## Configuration. 
+
+This application requires a specific configuration structure in Streamlit Secrets:
+```toml
+
+## Technologies
+
+- Python
+- Streamlit
+- pandas
+
+## Author
+
+PhD. Lucía Alvarez-Nuñez  
+2026
