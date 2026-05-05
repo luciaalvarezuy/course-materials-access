@@ -55,7 +55,9 @@ st.subheader(config["title"])
 
 st.info(f"Disponible de **{config['start_time']}** a **{config['end_time']}**.")
 
-st.markdown("Introduce el código de acceso indicado para obtener el material correspondiente.")
+st.markdown(
+    "Introduce el código de acceso indicado para obtener el material correspondiente."
+)
 
 access_code = st.text_input(
     "Código de acceso",
