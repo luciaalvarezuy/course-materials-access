@@ -4,7 +4,7 @@ import pandas as pd
 
 
 st.set_page_config(
-    page_title="Course Materials",
+    page_title="Materials del curs",
     page_icon="📘",
     layout="centered"
 )
@@ -46,30 +46,30 @@ def create_log(resource_name):
 try:
     config = load_config()
 except Exception:
-    st.error("La configuración no está disponible.")
+    st.error("La configuració no està disponible.")
     st.stop()
 
 
-st.title("📘 Course Materials")
+st.title("📘 Materials del curs")
 st.subheader(config["title"])
 
 st.info(f"Disponible de **{config['start_time']}** a **{config['end_time']}**.")
 
 st.markdown(
-    "Introduce el código de acceso indicado para obtener el material correspondiente."
+    "Introduïu el codi d'accés indicat per obtenir el material corresponent."
 )
 
 access_code = st.text_input(
     "Código de acceso",
     type="password",
-    placeholder="Introduce tu código"
+    placeholder="Introdueix el teu codi"
 )
 
-if st.button("Acceder al material"):
+if st.button("Accedir al material"):
     is_valid, resource_name, resource_url = get_resource(access_code, config)
 
     if is_valid:
-        st.success(f"Código correcto: **{resource_name}**")
+        st.success(f"Codi correcte: **{resource_name}**")
 
         st.link_button(
             label="Abrir material",
@@ -82,10 +82,10 @@ if st.button("Acceder al material"):
             st.dataframe(log, use_container_width=True)
 
     else:
-        st.error("El código ingresado no es correcto.")
+        st.error("El codi ingressat no és correcte.")
 
 
 st.divider()
 
-st.caption("Course materials access tool")
-st.caption("PhD. Lucía Alvarez-Nuñez | 2026")
+st.caption("Eina d'accés als materials del curs")
+st.caption(" IT Academy | Fundamentos ")
