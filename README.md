@@ -47,7 +47,7 @@ streamlit run app.py
 
 ## Configuration
 
-This application requires a specific configuration structure in Streamlit Secrets:
+This application requires a specific configuration structure in Streamlit Secrets
 
 ```toml
 
