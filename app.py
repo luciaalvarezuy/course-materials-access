@@ -60,7 +60,7 @@ st.markdown(
 )
 
 access_code = st.text_input(
-    "Código de acceso",
+    "Codi d'accés",
     type="password",
     placeholder="Introdueix el teu codi"
 )
